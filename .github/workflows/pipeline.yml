@@ -17,9 +17,8 @@ jobs:
 
       - name: 3. Etapa Test - Pruebas unitarias y de integracion
         run: |
-          echo "Ejecutando pruebas de concurrencia de mesas y calculo de pedidos..."
-          echo "18/18 pruebas unitarias aprobadas (Cobertura: 88%)."
-
+          echo "ERROR: Prueba fallida en modulo de Reservas (se permitio reserva fuera de horario)."
+          exit 1
       - name: 4. Etapa QA y Security - Analisis estatico
         run: |
           echo "Ejecutando analisis de seguridad (OWASP / SonarQube)..."
